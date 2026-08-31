@@ -1,6 +1,9 @@
-namespace GymManagementSystem.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
-public class HomeController
+namespace GymManagementSystem.Controllers
 {
-    
+    public class HomeController : Controller
+    {
+        public IActionResult Index() => View();
+    }
 }

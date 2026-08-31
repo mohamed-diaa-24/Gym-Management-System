@@ -1,18 +1,38 @@
-@model TModel
-
 @{
-    Layout = null;
+    ViewData["Title"] = "Welcome";
+    Layout = "_LoginLayout";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
+<div class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-center px-3">
+    <h1 class="display-4 fw-bold mb-3">🏋️ Gym Management System</h1>
+    <p class="lead text-muted mb-4" style="max-width: 500px;">
+        Manage trainers, gym classes, members and enrollments all in one place.
+    </p>
+    <div>
+        <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg px-4 me-2">Login</a>
+        <a href="#features" class="btn btn-outline-secondary btn-lg px-4">Learn More</a>
+    </div>
 </div>
-</body>
-</html>
+
+<div id="features" class="container py-5">
+    <div class="row text-center g-4">
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>👥 Trainers</h5>
+                <p class="text-muted mb-0">Browse classes and view enrolled members.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>📅 Classes</h5>
+                <p class="text-muted mb-0">Filter classes by trainer and view details.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 p-3">
+                <h5>✅ Enrollment</h5>
+                <p class="text-muted mb-0">Admins can enroll members into classes easily.</p>
+            </div>
+        </div>
+    </div>
+</div>

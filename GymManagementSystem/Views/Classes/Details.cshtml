@@ -1,0 +1,27 @@
+@model GymManagementSystem.Models.GymClass
+@{ ViewData["Title"] = "Class Details"; }
+
+<h3>@Model.Name</h3>
+<p>@Model.Description</p>
+<p><strong>Schedule:</strong> @Model.Schedule</p>
+<p><strong>Trainer:</strong> @Model.Trainer?.Name (@Model.Trainer?.Specialization)</p>
+
+<h5 class="mt-4">Enrolled Members</h5>
+<table class="table table-striped">
+    <thead>
+    <tr><th>Name</th><th>Email</th><th>Phone</th><th>Enrollment Date</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var e in Model.Enrollments)
+    {
+        <tr>
+            <td>@e.Member.Name</td>
+            <td>@e.Member.Email</td>
+            <td>@e.Member.Phone</td>
+            <td>@e.EnrollmentDate.ToShortDateString()</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

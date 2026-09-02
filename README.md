@@ -16,7 +16,7 @@ A simple gym management system with two roles:
 - ASP.NET Core MVC (.NET 10)
 - Entity Framework Core (Code First) + SQL Server
 - ASP.NET Core Identity (UserManager / SignInManager)
-- Bootstrap 5 (via CDN)
+- Bootstrap 5
 - jQuery + AJAX + Partial Views
 - SweetAlert2 (delete confirmations)
 - Session

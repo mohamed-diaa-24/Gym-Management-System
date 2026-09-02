@@ -10,7 +10,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services
     .AddIdentityServices(builder.Configuration)
-    .AddSessionServices();
+    .AddSessionServices()
+    .AddRepositoryServices()
+    .AddApplicationServices();
 
 var app = builder.Build();
 

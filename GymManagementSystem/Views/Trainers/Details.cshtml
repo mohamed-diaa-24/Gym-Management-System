@@ -1,8 +1,6 @@
-@model TModel
+@model GymManagementSystem.Models.Trainer
+@{ ViewData["Title"] = "Trainer Details"; }
 
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
-}
-
-<h2>title</h2>
+<h3>@Model.Name</h3>
+<p><strong>Specialization:</strong> @Model.Specialization</p>
+<a asp-action="Index" class="btn btn-secondary">Back</a>

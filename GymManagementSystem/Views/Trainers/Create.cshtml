@@ -1,8 +1,21 @@
-@model TModel
+@model GymManagementSystem.Models.Trainer
+@{ ViewData["Title"] = "Add Trainer"; }
 
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
-}
+<h3>Add Trainer</h3>
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Specialization" class="form-label"></label>
+        <input asp-for="Specialization" class="form-control" />
+        <span asp-validation-for="Specialization" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
 
-<h2>title</h2>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

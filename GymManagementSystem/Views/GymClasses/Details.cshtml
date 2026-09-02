@@ -1,0 +1,8 @@
+@model GymManagementSystem.Models.GymClass
+@{ ViewData["Title"] = "Class Details"; }
+
+<h3>@Model.Name</h3>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Schedule:</strong> @Model.Schedule</p>
+<p><strong>Trainer:</strong> @Model.Trainer?.Name</p>
+<a asp-action="Index" class="btn btn-secondary">Back</a>

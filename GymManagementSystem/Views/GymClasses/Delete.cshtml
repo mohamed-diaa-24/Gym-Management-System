@@ -1,0 +1,14 @@
+@model GymManagementSystem.Models.GymClass
+@{ ViewData["Title"] = "Delete Class"; }
+
+<h3>Are you sure you want to delete this class?</h3>
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Schedule:</strong> @Model.Schedule</p>
+<p><strong>Trainer:</strong> @Model.Trainer?.Name</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

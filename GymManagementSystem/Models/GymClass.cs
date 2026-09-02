@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace GymManagementSystem.Models
 {
@@ -18,6 +19,7 @@ namespace GymManagementSystem.Models
 
         [ForeignKey(nameof(Trainer))]
         public int TrainerId { get; set; }
+        [ValidateNever]
         public Trainer Trainer { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
